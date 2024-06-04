@@ -1,20 +1,19 @@
 // Import the Axios library to make HTTP requests. Axios is a popular JavaScript library for this purpose.
 import axios from 'axios';
-import { API_BASE_URL } from './constants';
-
+import { API_BASE_URL } from './constants'; // Ensure this import exists and the constant is defined in the 'constants' module
 
 // Create an instance of Axios and store it in the 'apiInstance' variable. This instance will have specific configuration options.
 const apiInstance = axios.create({
     // Set the base URL for this instance. All requests made using this instance will have this URL as their starting point.
-    baseURL: 'https://multivendor-ecommerce-api.up.railway.app/api/v1',
+    baseURL: 'https://multivendor-ecommerce-api.up.railway.app/api/v1', // Use the imported base URL
     
     // Set a timeout for requests made using this instance. If a request takes longer than 5 seconds to complete, it will be canceled.
-    timeout: 100000, // timeout after 5 seconds
+    timeout: 5000, // timeout after 5 seconds
     
     // Define headers that will be included in every request made using this instance. This is common for specifying the content type and accepted response type.
     headers: {
         'Content-Type': 'application/json', // The request will be sending data in JSON format.
-        Accept: 'application/json', // The request expects a response in JSON format.
+        'Accept': 'application/json', // The request expects a response in JSON format.
     },
 });
 
